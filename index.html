@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Mary ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#ffd6e0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+}
+
+/* caixa principal */
+
+.box{
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+max-width:500px;
+}
+
+/* botão */
+
+button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:#ff4b6e;
+color:white;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff2f55;
+}
+
+/* input */
+
+input{
+padding:10px;
+font-size:16px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box" id="senha">
+
+<h2>🔒 Diário privado</h2>
+
+<p>Digite a senha</p>
+
+<input type="password" id="pass">
+
+<br><br>
+
+<button onclick="entrar()">Entrar</button>
+
+</div>
+
+
+
+<div class="box" id="pagina1" style="display:none">
+
+<h2>Para Mary ❤️</h2>
+
+<p>
+
+Talvez isso pareça estranho no começo.
+
+Eu sei que fazer um site só para escrever algo pode parecer exagerado.
+
+Mas às vezes algumas pessoas aparecem na nossa vida de forma inesperada.
+
+Talvez tenha sido em alguma conversa.
+
+Talvez em alguma risada.
+
+Mas em algum momento eu percebi que você era uma pessoa diferente.
+
+Diferente de um jeito bom.
+
+</p>
+
+<button onclick="pagina2()">Continuar</button>
+
+</div>
+
+
+
+<div class="box" id="pagina2" style="display:none">
+
+<h2>Um pensamento ❤️</h2>
+
+<p>
+
+Algumas pessoas entram na nossa vida e acabam ocupando um espaço especial.
+
+Talvez seja o jeito de falar.
+
+Talvez o jeito de sorrir.
+
+Ou talvez apenas o jeito de ser.
+
+E então a gente percebe que começou a pensar naquela pessoa mais vezes do que imaginava.
+
+</p>
+
+<button onclick="pergunta()">Continuar</button>
+
+</div>
+
+
+
+<div class="box" id="pergunta" style="display:none">
+
+<h2>Uma pergunta ❤️</h2>
+
+<p>
+
+Você também se interessou por mim?
+
+</p>
+
+<button onclick="sim()">Sim ❤️</button>
+
+<button onclick="nao()">Não 🙂</button>
+
+</div>
+
+
+
+<script>
+
+function entrar(){
+
+var senha=document.getElementById("pass").value
+
+if(senha=="Mary007"){
+
+document.getElementById("senha").style.display="none";
+document.getElementById("pagina1").style.display="block";
+
+}else{
+
+alert("Senha incorreta");
+
+}
+
+}
+
+function pagina2(){
+
+document.getElementById("pagina1").style.display="none";
+document.getElementById("pagina2").style.display="block";
+
+}
+
+function pergunta(){
+
+document.getElementById("pagina2").style.display="none";
+document.getElementById("pergunta").style.display="block";
+
+}
+
+function sim(){
+
+window.open("https://wa.me/351924488547?text=✅ Eu também me interessei por você");
+
+}
+
+function nao(){
+
+window.open("https://wa.me/351924488547?text=❌ Não me interessei");
+
+}
+
+</script>
+
+</body>
+</html>
